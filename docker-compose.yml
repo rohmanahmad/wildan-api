@@ -1,0 +1,13 @@
+version: '3.7'
+networks:
+  officenet:
+    external: true
+services:
+  api:
+    image: rohmanahmad/php7.2-apache-pdo
+    # environments:
+    #   - APACHE_DOCUMENT_ROOT=/app
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 8080:80
